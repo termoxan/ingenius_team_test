@@ -1,6 +1,6 @@
 #include "TimeSeries.h"
 
-TimeSeries::TimeSeries(quint64 id, qint32 count) :
+TimeSeries::TimeSeries(const quint64 &id, const qint32 &count) :
     m_id(id),
     m_count(count)
 {

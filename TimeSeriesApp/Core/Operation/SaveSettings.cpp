@@ -24,7 +24,7 @@ QSharedPointer<TimeSeries> SaveSettings::timeSeries() const
     return m_timeSeries;
 }
 
-void SaveSettings::setTimeSeries(const QSharedPointer<TimeSeries> &timeSeries)
+void SaveSettings::setTimeSeries(QSharedPointer<TimeSeries> timeSeries)
 {
     m_timeSeries = timeSeries;
 }

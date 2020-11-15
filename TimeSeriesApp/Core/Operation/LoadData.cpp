@@ -13,7 +13,7 @@ QSharedPointer<TimeSeries> LoadData::timeSeries() const
     return m_timeSeries;
 }
 
-void LoadData::setTimeSeries(const QSharedPointer<TimeSeries> &timeSeries)
+void LoadData::setTimeSeries(QSharedPointer<TimeSeries> timeSeries)
 {
     m_timeSeries = timeSeries;
 }
