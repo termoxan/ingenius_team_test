@@ -1,18 +1,12 @@
 #include "OperationStatus.h"
 
 
-OperationStatus::OperationStatus(QSharedPointer<Operation> operation, quint8 progress,
+OperationStatus::OperationStatus(quint8 progress,
                                  const QString message) :
-    m_operation(operation.toWeakRef()),
     m_progress(progress),
     m_message(message)
 {
 
-}
-
-QSharedPointer<Operation> OperationStatus::operation() const
-{
-    return m_operation.toStrongRef();
 }
 
 quint8 OperationStatus::progress() const

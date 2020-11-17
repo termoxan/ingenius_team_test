@@ -1,8 +1,6 @@
 #ifndef OPERATION_H
 #define OPERATION_H
 
-#include <QSharedPointer>
-
 enum class OperationType
 {
     Initialize = 0,
@@ -11,26 +9,17 @@ enum class OperationType
     Analize
 };
 
-class OperationSettings;
-class OperationData;
 class OperationStatus;
 
 class Operation
 {
 public:
-    Operation(OperationType type, QSharedPointer<OperationSettings> settings);
+    Operation() {}
+    virtual ~Operation() {}
 
-    OperationType type() const;
-
-    QSharedPointer<OperationSettings> settings() const;
-    QSharedPointer<OperationData> data() const;
-    QSharedPointer<OperationStatus> status() const;
-
-private:
-    OperationType m_type;
-    QSharedPointer<OperationSettings> m_settings;
-    QSharedPointer<OperationData> m_data;
-    QSharedPointer<OperationStatus> m_status;
+    virtual OperationType type() const = 0;
+    virtual OperationStatus status() const = 0;
+    virtual void setStatus(const OperationStatus &status) = 0;
 };
 
 #endif // OPERATION_H

@@ -1,8 +1,6 @@
 #include "OperationResult.h"
 
-OperationResult::OperationResult(QSharedPointer<Operation> operation,
-                                 bool result, const QString &message) :
-    m_operation(operation),
+OperationResult::OperationResult(bool result, const QString &message) :
     m_bResult(result),
     m_message(message)
 {
