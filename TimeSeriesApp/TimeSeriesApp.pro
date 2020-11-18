@@ -9,6 +9,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+    Core/DataLoader.cpp \
     Core/Operation/InitializeOperation.cpp \
     Core/Operation/LoadOperation.cpp \
     Core/Operation/OperationResult.cpp \
@@ -16,10 +17,12 @@ SOURCES += \
     Core/Operation/SaveOperation.cpp \
     Core/TimeItem.cpp \
     Core/TimeSeries.cpp \
+    Core/TimeSeriesApplicationCore.cpp \
     main.cpp \
     Gui/TimeSeriesMainWindow.cpp
 
 HEADERS += \
+    Core/DataLoader.h \
     Core/Operation/InitializeOperation.h \
     Core/Operation/LoadOperation.h \
     Core/Operation/Operation.h \
@@ -28,6 +31,7 @@ HEADERS += \
     Core/Operation/SaveOperation.h \
     Core/TimeItem.h \
     Core/TimeSeries.h \
+    Core/TimeSeriesApplicationCore.h \
     Gui/TimeSeriesMainWindow.h
 
 FORMS += \

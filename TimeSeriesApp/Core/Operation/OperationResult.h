@@ -6,7 +6,7 @@
 class OperationResult
 {
 public:
-    explicit OperationResult(bool result, const QString &message);
+    explicit OperationResult(bool result = true, const QString &message = QString());
 
     bool result() const;
     void setResult(bool result);

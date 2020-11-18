@@ -11,7 +11,7 @@ class TimeSeies;
 class LoadOperation : public Operation
 {
 public:
-    LoadOperation();
+    explicit LoadOperation(const QString &fileName);
 
     // Operation interface
 public:

@@ -1,4 +1,4 @@
-#include "TimeSeriesMainWindow.h"
+#include "Gui/TimeSeriesMainWindow.h"
 
 #include <QApplication>
 

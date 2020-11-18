@@ -11,7 +11,8 @@ class TimeSeies;
 class SaveOperation : public Operation
 {
 public:
-    SaveOperation();
+    explicit SaveOperation(const QString &fileName,
+                           const QSharedPointer<TimeSeies> &timeSeries);
 
     // Operation interface
 public:

@@ -1,6 +1,7 @@
 #include "LoadOperation.h"
 
-LoadOperation::LoadOperation()
+LoadOperation::LoadOperation(const QString &fileName) :
+    m_fileName(fileName)
 {
 
 }

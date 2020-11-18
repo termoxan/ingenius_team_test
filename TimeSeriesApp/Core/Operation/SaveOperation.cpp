@@ -1,6 +1,9 @@
 #include "SaveOperation.h"
 
-SaveOperation::SaveOperation()
+SaveOperation::SaveOperation(const QString &fileName,
+                             const QSharedPointer<TimeSeies> &timeSeries) :
+    m_fileName(fileName),
+    m_timeSeries(timeSeries)
 {
 
 }
