@@ -16,7 +16,7 @@ TimeSeriesApplicationCore::TimeSeriesApplicationCore(QObject *parent) :
 }
 
 QSharedPointer<Operation> TimeSeriesApplicationCore::createSaveOperation(const QString &savedFileName,
-                                                                         const QSharedPointer<TimeSeries> &timeSeries) const
+                                                                         const QWeakPointer<TimeSeries> &timeSeries) const
 {
     auto operation = QSharedPointer<SaveOperation>::create(savedFileName, timeSeries);
 

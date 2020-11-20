@@ -1,7 +1,7 @@
 #include "SaveOperation.h"
 
 SaveOperation::SaveOperation(const QString &fileName,
-                             const QSharedPointer<TimeSeies> &timeSeries) :
+                             const QWeakPointer<TimeSeries> &timeSeries) :
     m_fileName(fileName),
     m_timeSeries(timeSeries)
 {
@@ -33,12 +33,12 @@ void SaveOperation::setFileName(const QString &fileName)
     m_fileName = fileName;
 }
 
-QSharedPointer<TimeSeies> SaveOperation::timeSeries() const
+QWeakPointer<TimeSeries> SaveOperation::timeSeries() const
 {
     return m_timeSeries;
 }
 
-void SaveOperation::setTimeSeries(const QSharedPointer<TimeSeies> &timeSeries)
+void SaveOperation::setTimeSeries(const QWeakPointer<TimeSeries> &timeSeries)
 {
     m_timeSeries = timeSeries;
 }

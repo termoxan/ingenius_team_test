@@ -6,13 +6,13 @@
 
 #include <QSharedPointer>
 
-class TimeSeies;
+class TimeSeries;
 
 class SaveOperation : public Operation
 {
 public:
     explicit SaveOperation(const QString &fileName,
-                           const QSharedPointer<TimeSeies> &timeSeries);
+                           const QWeakPointer<TimeSeries> &timeSeries);
 
     // Operation interface
 public:
@@ -23,14 +23,14 @@ public:
     QString fileName() const;
     void setFileName(const QString &fileName);
 
-    QSharedPointer<TimeSeies> timeSeries() const;
-    void setTimeSeries(const QSharedPointer<TimeSeies> &timeSeries);
+    QWeakPointer<TimeSeries> timeSeries() const;
+    void setTimeSeries(const QWeakPointer<TimeSeries> &timeSeries);
 
 private:
     OperationStatus m_status;
 
     QString m_fileName;
-    QSharedPointer<TimeSeies> m_timeSeries;
+    QWeakPointer<TimeSeries> m_timeSeries;
 };
 
 #endif // SAVEOPERATION_H

@@ -18,7 +18,7 @@ public:
     explicit TimeSeriesApplicationCore(QObject *parent = nullptr);
 
     QSharedPointer<Operation> createSaveOperation(const QString &savedFileName,
-                                                  const QSharedPointer<TimeSeries> &timeSeries) const;
+                                                  const QWeakPointer<TimeSeries> &timeSeries) const;
 
     QSharedPointer<Operation> createLoadOperation(const QString &loadedFileName) const;
 
