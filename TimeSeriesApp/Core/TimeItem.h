@@ -14,7 +14,7 @@ public:
      * @param index Индекс элемента.
      * @param value Значение элемента.
      */
-    explicit TimeItem(const quint64 &index, const qint32 &value);
+    explicit TimeItem(const quint64 &index = 0, const qint32 &value = 0);
 
     /// Возвращает индекс элемента.
     quint64 index() const;

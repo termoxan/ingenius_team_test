@@ -14,8 +14,29 @@
    <string>TimeSeriesMainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="m_menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="m_loadAction"/>
+   </widget>
+   <addaction name="m_menu"/>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="m_loadAction">
+   <property name="text">
+    <string>Загрузить ряд</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

@@ -5,9 +5,11 @@
 #include <QSharedPointer>
 
 #include "DataLoader.h"
+#include "DatabaseManager.h"
 
 class Operation;
 class OperationResult;
+class OperationStatus;
 
 class TimeSeries;
 
@@ -26,8 +28,13 @@ public:
     OperationResult startOperation(const QSharedPointer<Operation> &operation) const;
     void stopOperation(const QSharedPointer<Operation> &operation) const;
 
+signals:
+    void operationStarted(QSharedPointer<Operation> operation, OperationStatus status);
+    void operationFinished(QSharedPointer<Operation> operation, OperationResult result);
+
 private:
     QScopedPointer<DataLoader> m_dataLoader;
+    QScopedPointer<DatabaseManager> m_databaseManager;
 };
 
 #endif // TIMESERIESAPPLICATIONCORE_H

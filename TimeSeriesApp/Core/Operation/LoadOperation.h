@@ -6,7 +6,7 @@
 
 #include <QSharedPointer>
 
-class TimeSeies;
+class TimeSeries;
 
 class LoadOperation : public Operation
 {
@@ -22,14 +22,14 @@ public:
     QString fileName() const;
     void setFileName(const QString &fileName);
 
-    QSharedPointer<TimeSeies> loadedTimeSeries() const;
-    void setLoadedTimeSeries(const QSharedPointer<TimeSeies> &loadedTimeSeries);
+    QSharedPointer<TimeSeries> loadedTimeSeries() const;
+    void setLoadedTimeSeries(const QSharedPointer<TimeSeries> &loadedTimeSeries);
 
 private:
     OperationStatus m_status;
 
     QString m_fileName;
-    QSharedPointer<TimeSeies> m_loadedTimeSeries;
+    QSharedPointer<TimeSeries> m_loadedTimeSeries;
 };
 
 #endif // LOADOPERATION_H

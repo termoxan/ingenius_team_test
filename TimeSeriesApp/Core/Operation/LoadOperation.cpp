@@ -31,12 +31,12 @@ void LoadOperation::setFileName(const QString &fileName)
     m_fileName = fileName;
 }
 
-QSharedPointer<TimeSeies> LoadOperation::loadedTimeSeries() const
+QSharedPointer<TimeSeries> LoadOperation::loadedTimeSeries() const
 {
     return m_loadedTimeSeries;
 }
 
-void LoadOperation::setLoadedTimeSeries(const QSharedPointer<TimeSeies> &loadedTimeSeries)
+void LoadOperation::setLoadedTimeSeries(const QSharedPointer<TimeSeries> &loadedTimeSeries)
 {
     m_loadedTimeSeries = loadedTimeSeries;
 }
